@@ -2,11 +2,17 @@ html {
   font-family: "Roboto", sans-serif;
 }
 
+.header {
+  font-family: "Shrikhand", cursive;
+}
+
 html {
   box-sizing: border-box;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -15,25 +21,24 @@ html {
   height: 50px;
   border-radius: 25px;
   border-width: 0px;
-  background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
   box-shadow: 0px 5px 15px 5px #bbbbbb;
   color: white;
 }
+.button:hover {
+  cursor: pointer;
+  background: linear-gradient(to bottom right, #ff46cc, #782cd3);
+  box-shadow: 0px 5px 15px 8px #bbbbbb;
+}
 
 .header {
-  font-family: "Shrikhand", cursive;
-  height: 60px;
+  height: 6 0px;
   font-size: 35px;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-@media screen and (min-width: 768px) {
-  .header {
-    justify-content: flex-start;
-    padding-left: 20px;
-    padding-top: 20px;
-  }
+  padding-top: 20px;
+  padding-bottom: 10px;
 }
 
 * {
@@ -41,20 +46,43 @@ html {
   padding: 0;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  main {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+}
+
 .company-info {
   display: flex;
-  background-color: #e2dddd;
-  height: 335px;
+  height: 470px;
+  width: 100%;
   flex-direction: column;
   align-items: center;
   gap: 50px;
+  background-color: #e2dddd;
 }
 @media screen and (min-width: 768px) {
   .company-info {
-    width: 500px;
+    width: 600px;
+    height: 390px;
     margin-top: 10px;
     border-radius: 20px;
     box-shadow: 0px 5px 15px 5px #bbbbbb;
+    background-color: rgba(220, 211, 211, 0.595);
+  }
+}
+@media screen and (min-width: 768px) {
+  .company-info {
+    margin-right: 20px;
   }
 }
 .company-info__location {
@@ -63,7 +91,7 @@ html {
   bottom: 2px;
   justify-content: center;
   align-items: center;
-  background-color: #d3cfcf;
+  background-color: rgba(220, 211, 211, 0.595);
   height: 45px;
   width: 100%;
   font-weight: bold;
@@ -82,6 +110,108 @@ html {
 .company-info__title {
   font-weight: bold;
   font-size: 25px;
+}
+
+.how-it-works {
+  display: flex;
+  height: 470px;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  font-weight: bold;
+  font-size: 25px;
+  padding-top: 50px;
+  align-items: flex-start;
+  padding-left: 20px;
+}
+@media screen and (min-width: 768px) {
+  .how-it-works {
+    width: 600px;
+    height: 390px;
+    margin-top: 10px;
+    border-radius: 20px;
+    box-shadow: 0px 5px 15px 5px #bbbbbb;
+    background-color: rgba(220, 211, 211, 0.595);
+  }
+}
+@media screen and (min-width: 768px) {
+  .how-it-works {
+    padding-top: 10px;
+    align-items: center;
+  }
+}
+.how-it-works p {
+  padding-bottom: 20px;
+}
+.how-it-works ol {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  list-style: none;
+}
+.how-it-works__numbers {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  color: white;
+  font-size: 13px;
+  background-color: #9356DC;
+  position: relative;
+  right: 12px;
+  padding-top: 4px;
+}
+.how-it-works li {
+  display: flex;
+  align-self: center;
+  border-radius: 20px;
+  width: 350px;
+  height: 70px;
+  font-size: 15px;
+  box-shadow: 0px 5px 15px 5px #bbbbbb;
+  background-color: rgba(220, 211, 211, 0.595);
+  padding-top: 25px;
+  padding-right: 50px;
+}
+.how-it-works li i {
+  font-size: 20px;
+  color: gray;
+  padding-left: 15px;
+  padding-right: 30px;
+}
+
+.restaurants {
+  width: 100%;
+  height: 1000px;
+  background-color: rgba(220, 211, 211, 0.595);
+  font-weight: bold;
+  font-size: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+.restaurants p {
+  align-self: flex-start;
+  padding-top: 40px;
+  padding-left: 8%;
+  padding-bottom: 25px;
+}
+@media screen and (min-width: 768px) {
+  .restaurants p {
+    align-self: center;
+    padding-left: 0;
+  }
+}
+
+.card-1 {
+  box-shadow: 0px 5px 15px 5px #bbbbbb;
+  background-color: white;
+  width: 350px;
+  height: 265px;
+  border-radius: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */
