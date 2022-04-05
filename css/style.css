@@ -213,5 +213,46 @@ main {
   height: 265px;
   border-radius: 20px;
 }
+.card-1 img {
+  height: 170px;
+  object-fit: fill;
+}
+.card-1__container {
+  height: 50px;
+  padding-left: 12px;
+  padding-top: 12px;
+}
+.card-1__container h3 {
+  font-size: 25px;
+  width: 200px;
+}
+.card-1__container p {
+  padding: 0px;
+  font-size: 20px;
+  font-weight: normal;
+}
+.card-1__container .heart-empty {
+  position: relative;
+  left: 290px;
+  bottom: 45px;
+  color: gray;
+}
+.card-1__container .heart {
+  font-size: 19.9px;
+  position: relative;
+  left: 265.3px;
+  bottom: 40.6px;
+  display: inline-block;
+  overflow: hidden;
+  background: linear-gradient(to top, #FF79DA, #9356DC 50%, transparent 50%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 100% 200%;
+  transition: background-position 1s ease;
+}
+.card-1__container .heart:hover {
+  background-position: 0 100%;
+}
 
 /*# sourceMappingURL=style.css.map */
