@@ -6,6 +6,10 @@ html {
   font-family: "Shrikhand", cursive;
 }
 
+footer {
+  font-family: "Shrikhand", cursive;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -184,7 +188,6 @@ main {
 
 .restaurants {
   width: 100%;
-  height: 1000px;
   background-color: rgba(220, 211, 211, 0.595);
   font-weight: bold;
   font-size: 25px;
@@ -206,42 +209,68 @@ main {
   }
 }
 
-.card-1 {
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+@media screen and (min-width: 768px) {
+  .cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.card {
   box-shadow: 0px 5px 15px 5px #bbbbbb;
   background-color: white;
   width: 350px;
   height: 265px;
   border-radius: 20px;
 }
-.card-1 img {
+@media screen and (min-width: 768px) {
+  .card {
+    height: 350px;
+  }
+}
+.card img {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
   height: 170px;
   object-fit: fill;
 }
-.card-1__container {
+@media screen and (min-width: 768px) {
+  .card img {
+    height: 250px;
+  }
+}
+.card__container {
   height: 50px;
   padding-left: 12px;
   padding-top: 12px;
 }
-.card-1__container h3 {
+.card__container h3 {
   font-size: 25px;
   width: 200px;
 }
-.card-1__container p {
+.card__container p {
   padding: 0px;
   font-size: 20px;
   font-weight: normal;
 }
-.card-1__container .heart-empty {
+.card__container .heart-empty {
   position: relative;
   left: 290px;
   bottom: 45px;
   color: gray;
+  font-size: 25px;
 }
-.card-1__container .heart {
-  font-size: 19.9px;
+.card__container .heart {
+  font-size: 25px;
   position: relative;
-  left: 265.3px;
-  bottom: 40.6px;
+  left: 260.3px;
+  bottom: 39.5px;
   display: inline-block;
   overflow: hidden;
   background: linear-gradient(to top, #FF79DA, #9356DC 50%, transparent 50%);
@@ -251,8 +280,15 @@ main {
   background-size: 100% 200%;
   transition: background-position 1s ease;
 }
-.card-1__container .heart:hover {
+.card__container .heart:hover {
   background-position: 0 100%;
+}
+
+footer {
+  height: 300px;
+  width: 100%;
+  background-color: #444343;
+  color: white;
 }
 
 /*# sourceMappingURL=style.css.map */
