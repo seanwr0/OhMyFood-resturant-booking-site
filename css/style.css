@@ -9,6 +9,9 @@ html {
 footer {
   font-family: "Shrikhand", cursive;
 }
+footer p {
+  font-family: "Roboto", sans-serif;
+}
 
 html {
   box-sizing: border-box;
@@ -59,7 +62,6 @@ main {
   main {
     flex-direction: row;
     justify-content: space-around;
-    align-items: flex-start;
     flex-wrap: wrap;
     gap: 40px;
   }
@@ -195,6 +197,7 @@ main {
   flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 50px;
 }
 .restaurants p {
   align-self: flex-start;
@@ -212,7 +215,7 @@ main {
 .cards {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 40px;
 }
 @media screen and (min-width: 768px) {
   .cards {
@@ -232,6 +235,7 @@ main {
 @media screen and (min-width: 768px) {
   .card {
     height: 350px;
+    width: 320px;
   }
 }
 .card img {
@@ -261,7 +265,7 @@ main {
 }
 .card__container .heart-empty {
   position: relative;
-  left: 290px;
+  left: 250px;
   bottom: 45px;
   color: gray;
   font-size: 25px;
@@ -269,7 +273,7 @@ main {
 .card__container .heart {
   font-size: 25px;
   position: relative;
-  left: 260.3px;
+  left: 220.3px;
   bottom: 39.5px;
   display: inline-block;
   overflow: hidden;
@@ -285,9 +289,33 @@ main {
 }
 
 footer {
-  height: 300px;
+  height: 190px;
   width: 100%;
   background-color: #444343;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer__links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.footer__links a:link {
+  color: white;
+  text-decoration: none;
+}
+.footer__links a:visited {
+  color: white;
+}
+.footer__links a:hover {
+  color: #d4bfca;
+}
+.footer__links a:active {
   color: white;
 }
 

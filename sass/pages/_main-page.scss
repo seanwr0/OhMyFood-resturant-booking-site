@@ -11,7 +11,7 @@ main {
     @include large-screen {
         flex-direction: row;
         justify-content: space-around;
-        align-items: flex-start;
+       
         flex-wrap: wrap;
         gap: 40px;
 
@@ -137,6 +137,7 @@ main {
     flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 50px;
 
 
     p {
@@ -148,6 +149,7 @@ main {
         @include large-screen {
             align-self: center;
             padding-left: 0;
+           
 
         }
     }
@@ -158,7 +160,7 @@ main {
 .cards {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 40px;
 
     @include large-screen {
         flex-direction: row;
@@ -177,6 +179,7 @@ main {
 
     @include large-screen {
         height: 350px;
+        width: 320px;
     }
 
     img {
@@ -210,7 +213,7 @@ main {
 
         .heart-empty {
             position: relative;
-            left: 290px;
+            left: 250px;
             bottom: 45px;
             color: gray;
             font-size: 25px;
@@ -223,7 +226,7 @@ main {
             font-size: 25px;
             position: relative;
 
-            left: 260.3px;
+            left: 220.3px;
             bottom: 39.5px;
             display: inline-block;
             overflow: hidden;
@@ -245,9 +248,41 @@ main {
 }
 
 footer {
-    height: 300px;
+    height: 190px;
     width: 100%;
     background-color: rgb(68, 67, 67);
     color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+
+}
+
+.footer__links {
+    list-style: none;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    
+    a:link {
+        color: white;
+        text-decoration: none;
+        
+    }
+
+    a:visited {
+        color: white;
+    }
+
+    a:hover {
+        color: rgb(212, 191, 202);
+    }
+
+    a:active {
+        color: white;
+    }
 
 }
