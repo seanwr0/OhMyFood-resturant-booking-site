@@ -48,6 +48,37 @@ html {
   padding-bottom: 10px;
 }
 
+footer {
+  height: 190px;
+  width: 100%;
+  background-color: #444343;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer__links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.footer__links a:link {
+  color: white;
+  text-decoration: none;
+}
+.footer__links a:visited {
+  color: white;
+}
+.footer__links a:hover {
+  color: #d4bfca;
+}
+.footer__links a:active {
+  color: white;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -286,37 +317,6 @@ main {
 }
 .card__container .heart:hover {
   background-position: 0 100%;
-}
-
-footer {
-  height: 190px;
-  width: 100%;
-  background-color: #444343;
-  color: white;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.footer__links {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-.footer__links a:link {
-  color: white;
-  text-decoration: none;
-}
-.footer__links a:visited {
-  color: white;
-}
-.footer__links a:hover {
-  color: #d4bfca;
-}
-.footer__links a:active {
-  color: white;
 }
 
 /*# sourceMappingURL=style.css.map */
