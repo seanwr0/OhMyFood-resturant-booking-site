@@ -1,4 +1,31 @@
+
+.button-link{
+    a:link {
+        color: white;
+        text-decoration: none;
+
+    }
+
+    a:visited {
+        color: white;
+    }
+
+    a:hover {
+        color: rgb(212, 191, 202);
+    }
+
+    a:active {
+        color: white;
+    }
+
+
+}
+
+
 .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 220px;
     height: 50px;
     border-radius: 25px;
@@ -6,7 +33,7 @@
     background: linear-gradient(to bottom right, $color-secondary, $color-primary);
     @include area-shadow;
     color: white;
-
+    
     &:hover {
         cursor: pointer;
         background: linear-gradient(to bottom right, $color-secondary-dark, $color-primary-dark);

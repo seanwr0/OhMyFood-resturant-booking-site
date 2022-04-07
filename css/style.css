@@ -23,7 +23,29 @@ html {
   box-sizing: inherit;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.button-link a:link {
+  color: white;
+  text-decoration: none;
+}
+.button-link a:visited {
+  color: white;
+}
+.button-link a:hover {
+  color: #d4bfca;
+}
+.button-link a:active {
+  color: white;
+}
+
 .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 220px;
   height: 50px;
   border-radius: 25px;
@@ -79,15 +101,11 @@ footer {
   color: white;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-}
-
 main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-width: 350px;
 }
 @media screen and (min-width: 768px) {
   main {
@@ -102,6 +120,7 @@ main {
   display: flex;
   height: 470px;
   width: 100%;
+  min-width: 350px;
   flex-direction: column;
   align-items: center;
   gap: 50px;
@@ -151,15 +170,18 @@ main {
 
 .how-it-works {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
   height: 470px;
   width: 100%;
+  min-width: 350px;
   flex-direction: column;
   align-items: center;
   font-weight: bold;
   font-size: 25px;
   padding-top: 50px;
-  align-items: flex-start;
-  padding-left: 20px;
+  padding-left: 4%;
 }
 @media screen and (min-width: 768px) {
   .how-it-works {
@@ -179,6 +201,7 @@ main {
 }
 .how-it-works p {
   padding-bottom: 20px;
+  padding-right: 150px;
 }
 .how-it-works ol {
   display: flex;
@@ -204,8 +227,8 @@ main {
   display: flex;
   align-self: center;
   border-radius: 20px;
-  width: 350px;
   height: 70px;
+  width: 340px;
   font-size: 15px;
   box-shadow: 0px 5px 15px 5px #bbbbbb;
   background-color: rgba(220, 211, 211, 0.595);
@@ -221,6 +244,7 @@ main {
 
 .restaurants {
   width: 100%;
+  min-width: 350px;
   background-color: rgba(220, 211, 211, 0.595);
   font-weight: bold;
   font-size: 25px;
@@ -273,6 +297,7 @@ main {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   height: 170px;
+  width: 100%;
   object-fit: fill;
 }
 @media screen and (min-width: 768px) {
