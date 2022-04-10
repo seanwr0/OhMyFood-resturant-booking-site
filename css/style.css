@@ -111,8 +111,19 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  animation: timer 0.2s 4s;
+  animation-fill-mode: backwards;
+  animation-fill-mode: forwards;
 }
 
+@keyframes timer {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
 .spinner {
   z-index: 2;
   display: inline-block;
