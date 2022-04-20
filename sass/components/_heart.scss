@@ -1,0 +1,110 @@
+.container {
+    display: block;
+    height: 50px;
+    width: 100%;
+    padding-left: 12px;
+    padding-top: 12px;
+   
+    h2{
+       width: 100px;
+       margin: 0px;
+    }
+   
+   
+
+    .like-button {
+        padding: 0px;
+        font-size: 20px;
+        font-weight: normal;
+
+    }
+
+    .heart-empty {
+        position: relative;
+        left: 270px;
+        bottom: 50px;
+  
+        color: gray;
+        font-size: 25px;
+       
+    }
+
+
+
+    .heart {
+      
+        font-size: 25.1px;
+        position: relative;
+        left: 239px;
+        bottom: 43.8px;
+  
+  
+        display: inline-block;
+        overflow: hidden;
+        background: linear-gradient(to top, $color-secondary, $color-primary 50%, transparent 50%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 100% 200%;
+        transition: background-position 1s ease;
+
+
+
+
+        &:hover {
+
+            background-position: 0 100%;
+        }
+    }
+
+}
+
+.container__menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    @include large-screen{
+        flex-direction: column;
+        width: 50px;
+        padding: 0px;
+    }
+}
+
+.heart-empty-menu{
+    position: relative;
+    left: 0px;
+    bottom: 30px;
+
+    color: gray;
+    font-size: 25px;
+    @include large-screen{
+        bottom: 10px;
+    }
+}
+
+.heart-menu{
+    font-size: 25.1px;
+    position: relative;
+    left: -28.6px;
+    bottom: 23.8px;
+    @include large-screen{
+        bottom: 3.8px;
+    }
+    display: inline-block;
+    overflow: hidden;
+    background: linear-gradient(to top, $color-secondary, $color-primary 50%, transparent 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 100% 200%;
+    transition: background-position 1s ease;
+
+
+
+
+    &:hover {
+
+        background-position: 0 100%;
+    }
+}
+

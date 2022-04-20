@@ -8,7 +8,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: timer .2s 4s;
+    animation: timer .2s 1s;
     animation-fill-mode: backwards;
     animation-fill-mode: forwards;
     
@@ -62,6 +62,11 @@ main {
 
 
 .company-info {
+    a:link{
+        text-decoration: none;
+    }
+  
+
     @include section-block;
     gap: 50px;
     background-color: rgb(226, 221, 221);
@@ -207,6 +212,22 @@ main {
     display: flex;
     flex-direction: column;
     gap: 40px;
+    a:link{
+        text-decoration: none;
+        color: black;
+    }
+    a:visited {
+        color: black;
+    }
+
+    a:hover {
+        color: black;
+    }
+
+    a:active {
+        color: black;
+    }
+
 
     @include large-screen {
         flex-direction: row;
@@ -217,16 +238,18 @@ main {
 }
 
 .card {
+   
     @include area-shadow;
     background-color: white;
     width: 350px;
     height: 265px;
     border-radius: 20px;
-
+    font-size: 25px;
     @include large-screen {
         height: 350px;
         width: 320px;
     }
+
 
     img {
         border-top-left-radius: 20px;
@@ -239,58 +262,20 @@ main {
             height: 250px;
         }
 
+    
     }
 
-    &__container {
-        height: 50px;
-        padding-left: 12px;
-        padding-top: 12px;
-
-        h3 {
-            font-size: 25px;
-            width: 200px;
-
-        }
-
-        p {
-            padding: 0px;
-            font-size: 20px;
-            font-weight: normal;
-        }
-
-        .heart-empty {
-            position: relative;
-            left: 250px;
-            bottom: 45px;
-            color: gray;
-            font-size: 25px;
-        }
-
-
-
-        .heart {
-
-            font-size: 25px;
-            position: relative;
-            left: 220.3px;
-            bottom: 39.5px;
-            display: inline-block;
-            overflow: hidden;
-            background: linear-gradient(to top, $color-secondary, $color-primary 50%, transparent 50%);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-size: 100% 200%;
-            transition: background-position 1s ease;
-
-
-
-
-            &:hover {
-
-                background-position: 0 100%;
-            }
-        }
-
+    h3{
+        padding: 0%;
+        font-size: 25px;
     }
+    
+    p{
+        padding: 0%;
+        font-size: 20px;
+       
+        font-weight: normal;
+    }
+
+    
 }
