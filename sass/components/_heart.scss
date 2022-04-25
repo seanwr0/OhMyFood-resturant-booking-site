@@ -64,7 +64,8 @@
     flex-direction: row;
     justify-content: space-between;
     @include large-screen{
-        flex-direction: column;
+        gap: 420px;
+        flex-direction: row;
         width: 50px;
         padding: 0px;
     }
@@ -73,12 +74,12 @@
 .heart-empty-menu{
     position: relative;
     left: 0px;
-    bottom: 30px;
+    bottom: 13px;
 
     color: gray;
     font-size: 25px;
     @include large-screen{
-        bottom: 10px;
+        bottom: 7px;
     }
 }
 

@@ -1,25 +1,116 @@
-.entrees {
+.menu-area {
+    &__fade {
+
+        z-index: 2;
+        position: absolute;
+        width: 107%;
+        background-color: $color-gray;
+        height: 104%;
+        right: -3px;
+
+        animation: fade-in 1.5s .7s;
+        animation-fill-mode: backwards;
+        animation-fill-mode: forwards;
+
+        @include large-screen {
+            height: 108%;
+            left: -12px;
+            bottom: -22px;
+
+        }
+
+
+        @keyframes fade-in {
+            0% {
+                opacity: 100%;
+            }
+
+            100% {
+                opacity: 0%;
+            }
+
+
+        }
+
+    }
+
+    &__fade-2 {
+        animation-delay: 1.5s;
+    }
+
+
+    &__fade-3 {
+        animation-delay: 2s;
+    }
+
     @include section-block;
+    background-color: $color-gray;
+    align-items: flex-start;
+    justify-content: flex-start;
+    justify-self: flex-start;
+    position: relative;
+    gap: 20px;
+    height: 350px;
+    margin-bottom: 20px;
+    width: 360px;
+
+
+
+    h3 {
+        padding-bottom: 30px;
+    }
+
+    @include large-screen {
+        justify-content: center;
+        align-items: center;
+        bottom: 0px;
+        padding-top: 20px;
+    }
 }
 
 .food-card {
-    display: flex;
-    justify-content: flex-start;
-    gap: 10%;
+
+
+
     overflow: hidden;
 
     @include area-shadow;
     padding-top: 8px;
     padding-left: 10px;
     width: 350px;
-    height: 55px;
+    height: 75px;
     border-radius: 15px;
+
+    h4 {
+        margin-bottom: 10px;
+    }
 
     &:active {
         &>.card-animation {
 
             animation: animation-move 1.5s;
+            animation-fill-mode: forwards;
+        }
 
+        &>.cost {
+
+            animation: animation-cost 1.5s;
+            animation-delay: 150ms;
+            animation-fill-mode: forwards;
+
+
+        }
+
+        &>.food-card__text {
+
+            animation: animation-text 1.5s;
+            animation-delay: 150ms;
+            animation-fill-mode: forwards;
+
+        }
+
+        &>.card-animation i {
+            animation: spin .90s ease-in-out 1;
         }
     }
 
@@ -28,26 +119,86 @@
 }
 
 .food-card__text {
-
+    width: 300px;
     white-space: nowrap;
+    overflow: hidden;
     text-overflow: ellipsis;
+
+}
+
+@keyframes animation-text {
+    0% {
+        transform: scaleX(100%)
+    }
+
+    100% {
+        transform: scaleX(100%)
+    }
+
+}
+
+
+
+.cost {
+
+    height: 50px;
+    width: 30px;
+    position: relative;
+    bottom: 19px;
+    left: 290px;
+}
+
+@keyframes animation-cost {
+    0% {
+        transform: translate(0%);
+    }
+
+    100% {
+        transform: translate(-230%);
+    }
 
 }
 
 
 
 .card-animation {
-    width: 100px;
-    height: 55px;
-    position: relative;
-    bottom: 8px;
-    left: 49px;
     display: flex;
     align-items: center;
-
+    justify-content: center;
+    width: 85px;
+    height: 75px;
+    position: relative;
+    bottom: 105px;
+    left: 340px;
     border-radius: 15px;
-    transform-origin: right;
     background: ($color-tertiary);
+
+    i {
+        color: $color-tertiary;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 35px;
+        height: 35px;
+        font-size: 20px;
+        background-color: white;
+
+
+
+
+
+
+
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+
+    }
 
 
 }
@@ -59,10 +210,7 @@
     }
 
     100% {
-        transform: translate(-100%);
+        transform: translate(-99%);
     }
-
-
-
 
 }
