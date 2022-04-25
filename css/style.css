@@ -199,6 +199,7 @@ html {
   }
   100% {
     opacity: 0%;
+    z-index: -1;
   }
 }
 .menu-area__fade-2 {
@@ -654,7 +655,8 @@ main {
   font-size: 25px;
 }
 .header-menu img {
-  border-radius: 10px;
+  box-shadow: 0px 5px 15px 5px #bbbbbb;
+  border-radius: 20px;
   height: 330px;
   width: 100%;
 }
@@ -708,7 +710,9 @@ main {
 }
 @media screen and (min-width: 768px) {
   .name {
-    bottom: 40px;
+    box-shadow: 0px 5px 15px 8px #bbbbbb;
+    z-index: 3;
+    top: 15px;
     padding: 0px;
     margin: 0px;
     width: 600px;

@@ -20,7 +20,8 @@
         font-size: 25px;
     }
     img{
-        border-radius: 10px;
+        @include area-shadow;
+        border-radius: 20px;
         height: 330px;
         width: 100%;
       
@@ -63,8 +64,10 @@
   
 
     @include large-screen{
+        @include area-shadow-darker;
+        z-index: 3;
 
-        bottom: 40px;
+        top: 15px;
         padding: 0px;
         margin: 0px;
         width: 600px;
