@@ -78,23 +78,14 @@ html {
   width: 100px;
   margin: 0px;
 }
-.container .like-button {
-  padding: 0px;
-  font-size: 20px;
-  font-weight: normal;
-}
 .container .heart-empty {
-  position: relative;
-  left: 270px;
-  bottom: 50px;
+  position: absolute;
   color: gray;
   font-size: 25px;
 }
 .container .heart {
   font-size: 25.1px;
-  position: relative;
-  left: 239px;
-  bottom: 43.8px;
+  position: absolute;
   display: inline-block;
   overflow: hidden;
   background: linear-gradient(to top, #FF79DA, #9356DC 50%, transparent 50%);
@@ -107,7 +98,11 @@ html {
 .container .heart:hover {
   background-position: 0 100%;
 }
-
+.container__like {
+  position: relative;
+  left: 260px;
+  bottom: 40px;
+}
 .container__menu {
   display: flex;
   flex-direction: row;
@@ -121,41 +116,10 @@ html {
     padding: 0px;
   }
 }
-
-.heart-empty-menu {
+.container__heart {
+  background-color: aqua;
   position: relative;
-  left: 0px;
-  bottom: 13px;
-  color: gray;
-  font-size: 25px;
-}
-@media screen and (min-width: 768px) {
-  .heart-empty-menu {
-    bottom: 7px;
-  }
-}
-
-.heart-menu {
-  font-size: 25.1px;
-  position: relative;
-  left: -28.6px;
-  bottom: 23.8px;
-  display: inline-block;
-  overflow: hidden;
-  background: linear-gradient(to top, #FF79DA, #9356DC 50%, transparent 50%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-size: 100% 200%;
-  transition: background-position 1s ease;
-}
-@media screen and (min-width: 768px) {
-  .heart-menu {
-    bottom: 3.8px;
-  }
-}
-.heart-menu:hover {
-  background-position: 0 100%;
+  bottom: 9px;
 }
 
 .menu-area {
