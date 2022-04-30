@@ -107,6 +107,8 @@ html {
   position: relative;
   left: 260px;
   bottom: 40px;
+  height: 10px;
+  width: 10px;
 }
 .container__menu {
   display: flex;
@@ -213,21 +215,19 @@ html {
 .food-card:hover {
   cursor: pointer;
 }
-.food-card:active > .card-animation {
-  animation: animation-move 1.5s;
-  animation-fill-mode: forwards;
+.food-card:hover > .card-animation {
+  animation: animation-move 1.5s both;
 }
-.food-card:active > .cost {
+.food-card:hover > .cost {
   animation: animation-cost 1.5s;
   animation-delay: 150ms;
-  animation-fill-mode: forwards;
+  animation-fill-mode: both;
 }
-.food-card:active > .food-card__text {
+.food-card:hover > .food-card__text {
   animation: animation-text 1.5s;
   animation-delay: 150ms;
-  animation-fill-mode: forwards;
 }
-.food-card:active > .card-animation i {
+.food-card:hover > .card-animation i {
   animation: spin 0.9s ease-in-out 1;
 }
 
@@ -252,6 +252,11 @@ html {
   position: relative;
   bottom: 19px;
   left: 290px;
+  white-space: nowrap;
+  font-size: 14px;
+}
+.cost i {
+  font-size: 12px;
 }
 
 @keyframes animation-cost {

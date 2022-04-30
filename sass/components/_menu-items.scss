@@ -88,35 +88,33 @@
 
     &:hover {
         cursor: pointer;
-    }
-
-    &:active {
+  
         &>.card-animation {
 
-            animation: animation-move 1.5s;
-            animation-fill-mode: forwards;
+            animation: animation-move 1.5s both;
+            //animation-fill-mode: both;
         }
 
         &>.cost {
 
             animation: animation-cost 1.5s;
             animation-delay: 150ms;
-            animation-fill-mode: forwards;
+            animation-fill-mode: both;
 
 
         }
 
-        &>.food-card__text {
+       &>.food-card__text {
 
-            animation: animation-text 1.5s;
+        animation: animation-text 1.5s;
             animation-delay: 150ms;
-            animation-fill-mode: forwards;
+           
 
         }
 
         &>.card-animation i {
-            animation: spin .90s ease-in-out 1;
-        }
+           animation: spin .90s ease-in-out 1;
+       }
     }
 
 
@@ -151,6 +149,13 @@
     position: relative;
     bottom: 19px;
     left: 290px;
+    white-space: nowrap;
+    font-size: 14px;
+    i{
+        font-size: 12px
+    }
+
+
 }
 
 @keyframes animation-cost {
