@@ -78,12 +78,17 @@ html {
   width: 100px;
   margin: 0px;
 }
+.container i {
+  width: 25px;
+}
 .container .heart-empty {
   position: absolute;
   color: gray;
   font-size: 25px;
+  width: 25px;
 }
 .container .heart {
+  width: 25px;
   font-size: 25.1px;
   position: absolute;
   display: inline-block;
@@ -106,7 +111,7 @@ html {
 .container__menu {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  gap: 50%;
 }
 @media screen and (min-width: 768px) {
   .container__menu {
@@ -117,7 +122,6 @@ html {
   }
 }
 .container__heart {
-  background-color: aqua;
   position: relative;
   bottom: 9px;
 }
@@ -205,6 +209,9 @@ html {
 }
 .food-card h4 {
   margin-bottom: 10px;
+}
+.food-card:hover {
+  cursor: pointer;
 }
 .food-card:active > .card-animation {
   animation: animation-move 1.5s;
@@ -580,6 +587,28 @@ main {
     width: 320px;
   }
 }
+.card__image {
+  position: relative;
+}
+.card__new {
+  border-radius: 4px;
+  box-shadow: inset -1px 0.4px 10px 0.8px #ccece3;
+  background-color: #99E2D0;
+  width: 100px;
+  height: 40px;
+  color: green;
+  position: absolute;
+  top: 15px;
+  left: 235px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .card__new {
+    left: 200px;
+  }
+}
 .card img {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
@@ -686,8 +715,8 @@ main {
     background: linear-gradient(to bottom right, #99E2D0, #9356DC);
   }
 }
-.name i {
-  padding-top: 10px;
+.name h2 {
+  white-space: nowrap;
 }
 
 /*# sourceMappingURL=style.css.map */

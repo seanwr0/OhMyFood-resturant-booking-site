@@ -40,13 +40,11 @@
 .menu{
     display: flex;
     justify-content: center;
-
     background-color: $color-gray;
 }
 
 
 .name{
-    
 
     @include section-block;
     font-size: 20px;
@@ -80,8 +78,8 @@
     }
    
   
-    i{
-        padding-top: 10px;
+    h2{
+        white-space: nowrap;
     }
 
   

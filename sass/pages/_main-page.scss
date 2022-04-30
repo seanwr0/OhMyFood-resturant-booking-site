@@ -250,6 +250,28 @@ main {
         height: 350px;
         width: 320px;
     }
+    
+    &__image{
+        position: relative;
+    }
+    &__new{
+        border-radius: 4px;
+        box-shadow: inset -1px .4px 10px .8px #ccece3;;
+        background-color: $color-tertiary;
+        width: 100px;
+        height: 40px;
+        color: green;
+        position: absolute;
+        top: 15px;
+        left: 235px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @include large-screen{
+            left: 200px;
+        }
+    }
 
 
     img {
