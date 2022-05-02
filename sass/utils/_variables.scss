@@ -1,7 +1,8 @@
 $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
-$color-gray:  rgba(220, 211, 211, );
+$color-gray:  rgb(240, 236, 236);
 
 $color-primary-dark: darken($color-primary, 10%);
 $color-secondary-dark: darken($color-secondary, 10%);
+$color-gray-dark: darken($color-gray, 5%);

@@ -63,18 +63,20 @@ main {
 
 
 .company-info {
-    a:link{
-        text-decoration: none;
-    }
-  
 
     @include section-block;
     gap: 50px;
-    background-color: rgb(226, 221, 221);
+    background-color: $color-gray;
+    height: 350px;
 
     @include large-screen {
         margin-right: 20px;
     }
+
+    a:link{
+        text-decoration: none;
+    }
+  
 
     &__location {
         display: flex;
@@ -82,7 +84,7 @@ main {
         bottom: 2px;
         justify-content: center;
         align-items: center;
-        background-color: $color-gray;
+        background-color: $color-gray-dark;
         height: 45px;
         width: 100%;
         font-weight: bold;
@@ -133,6 +135,11 @@ main {
         flex-direction: column;
         gap: 40px;
         list-style: none;
+        :nth-child(3){
+            i{
+            color: $color-primary;
+            }
+        }
     }
 
     &__numbers {

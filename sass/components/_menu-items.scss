@@ -58,7 +58,7 @@
 
 
     h3 {
-        padding-bottom: 30px;
+        padding-top: 10px;
     }
 
     @include large-screen {
@@ -88,33 +88,26 @@
 
     &:hover {
         cursor: pointer;
-  
-        &>.card-animation {
 
-            animation: animation-move 1.5s both;
-            //animation-fill-mode: both;
+        &>.card-animation {
+            left: 257px;
+            transition: 1.4s;
         }
 
         &>.cost {
-
-            animation: animation-cost 1.5s;
-            animation-delay: 150ms;
-            animation-fill-mode: both;
-
+            left: 220px;
+            transition: 1s .2s;
 
         }
-
-       &>.food-card__text {
-
-        animation: animation-text 1.5s;
-            animation-delay: 150ms;
-           
-
-        }
-
+      
         &>.card-animation i {
-           animation: spin .90s ease-in-out 1;
-       }
+            animation: spin .90s ease-in-out 1;
+        }
+
+        &>.food-card__text p{
+            width:  220px;
+            transition: 1s .2s;
+        }
     }
 
 
@@ -122,28 +115,33 @@
 }
 
 .food-card__text {
-    width: 300px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
 
-}
-
-@keyframes animation-text {
-    0% {
-        transform: scaleX(100%)
-    }
-
-    100% {
-        transform: scaleX(100%)
+    p {
+        transition: width 1s ease;
+        width: 300px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        
     }
 
 }
+
+// @keyframes animation-text {
+//     0% {
+//         width: 300px;
+//     }
+
+//     100% {
+//         width: 200px;
+//     }
+
+// }
 
 
 
 .cost {
-
+    transition: left 1s ease;
     height: 50px;
     width: 30px;
     position: relative;
@@ -151,27 +149,29 @@
     left: 290px;
     white-space: nowrap;
     font-size: 14px;
-    i{
+
+    i {
         font-size: 12px
     }
 
 
 }
 
-@keyframes animation-cost {
-    0% {
-        transform: translate(0%);
-    }
+// @keyframes animation-cost {
+//     0% {
+//         transform: translate(0%);
+//     }
 
-    100% {
-        transform: translate(-230%);
-    }
+//     100% {
+//         transform: translate(-230%);
+//     }
 
-}
+// }
 
 
 
 .card-animation {
+    transition: left 1s ease;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -180,7 +180,7 @@
     position: relative;
     bottom: 105px;
     left: 340px;
-    border-radius: 15px;
+
     background: ($color-tertiary);
 
     i {
@@ -210,17 +210,5 @@
 
     }
 
-
-}
-
-
-@keyframes animation-move {
-    0% {
-        transform: translate(0%);
-    }
-
-    100% {
-        transform: translate(-99%);
-    }
 
 }

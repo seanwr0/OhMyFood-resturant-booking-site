@@ -9,7 +9,7 @@ html {
 footer {
   font-family: "Shrikhand", cursive;
 }
-footer p {
+footer a:link {
   font-family: "Roboto", sans-serif;
 }
 
@@ -123,10 +123,6 @@ html {
     padding: 0px;
   }
 }
-.container__heart {
-  position: relative;
-  bottom: 9px;
-}
 
 .menu-area {
   display: flex;
@@ -135,7 +131,7 @@ html {
   min-width: 350px;
   flex-direction: column;
   align-items: center;
-  background-color: #dcd3d3;
+  background-color: #f0ecec;
   align-items: flex-start;
   justify-content: flex-start;
   justify-self: flex-start;
@@ -149,7 +145,7 @@ html {
   z-index: 2;
   position: absolute;
   width: 107%;
-  background-color: #dcd3d3;
+  background-color: #f0ecec;
   height: 104%;
   right: -3px;
   animation: fade-in 1.5s 0.7s;
@@ -185,11 +181,11 @@ html {
     margin-top: 10px;
     border-radius: 20px;
     box-shadow: 0px 5px 15px 5px #bbbbbb;
-    background-color: #dcd3d3;
+    background-color: #f0ecec;
   }
 }
 .menu-area h3 {
-  padding-bottom: 30px;
+  padding-top: 10px;
 }
 @media screen and (min-width: 768px) {
   .menu-area {
@@ -216,37 +212,31 @@ html {
   cursor: pointer;
 }
 .food-card:hover > .card-animation {
-  animation: animation-move 1.5s both;
+  left: 257px;
+  transition: 1.4s;
 }
 .food-card:hover > .cost {
-  animation: animation-cost 1.5s;
-  animation-delay: 150ms;
-  animation-fill-mode: both;
-}
-.food-card:hover > .food-card__text {
-  animation: animation-text 1.5s;
-  animation-delay: 150ms;
+  left: 220px;
+  transition: 1s 0.2s;
 }
 .food-card:hover > .card-animation i {
   animation: spin 0.9s ease-in-out 1;
 }
+.food-card:hover > .food-card__text p {
+  width: 220px;
+  transition: 1s 0.2s;
+}
 
-.food-card__text {
+.food-card__text p {
+  transition: width 1s ease;
   width: 300px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-@keyframes animation-text {
-  0% {
-    transform: scaleX(100%);
-  }
-  100% {
-    transform: scaleX(100%);
-  }
-}
 .cost {
+  transition: left 1s ease;
   height: 50px;
   width: 30px;
   position: relative;
@@ -259,15 +249,8 @@ html {
   font-size: 12px;
 }
 
-@keyframes animation-cost {
-  0% {
-    transform: translate(0%);
-  }
-  100% {
-    transform: translate(-230%);
-  }
-}
 .card-animation {
+  transition: left 1s ease;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -276,7 +259,6 @@ html {
   position: relative;
   bottom: 105px;
   left: 340px;
-  border-radius: 15px;
   background: #99E2D0;
 }
 .card-animation i {
@@ -296,14 +278,6 @@ html {
   }
 }
 
-@keyframes animation-move {
-  0% {
-    transform: translate(0%);
-  }
-  100% {
-    transform: translate(-99%);
-  }
-}
 .header {
   font-size: 35px;
   display: flex;
@@ -311,6 +285,41 @@ html {
   align-items: center;
   padding-top: 20px;
   padding-bottom: 10px;
+}
+
+.header-menu {
+  background-color: #f0ecec;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.header-menu a:link {
+  color: black;
+  text-decoration: none;
+}
+.header-menu a:visited {
+  color: black;
+}
+.header-menu i {
+  padding-right: 50px;
+  font-size: 25px;
+}
+.header-menu img {
+  box-shadow: 0px 5px 15px 5px #bbbbbb;
+  border-radius: 20px;
+  height: 330px;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .header-menu img {
+    width: 700px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .header-menu {
+    height: 475px;
+    background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  }
 }
 
 footer {
@@ -322,6 +331,9 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+footer i {
+  padding-right: 10px;
 }
 
 .footer__links {
@@ -406,10 +418,8 @@ main {
   flex-direction: column;
   align-items: center;
   gap: 50px;
-  background-color: #e2dddd;
-}
-.company-info a:link {
-  text-decoration: none;
+  background-color: #f0ecec;
+  height: 350px;
 }
 @media screen and (min-width: 768px) {
   .company-info {
@@ -418,7 +428,7 @@ main {
     margin-top: 10px;
     border-radius: 20px;
     box-shadow: 0px 5px 15px 5px #bbbbbb;
-    background-color: #dcd3d3;
+    background-color: #f0ecec;
   }
 }
 @media screen and (min-width: 768px) {
@@ -426,13 +436,16 @@ main {
     margin-right: 20px;
   }
 }
+.company-info a:link {
+  text-decoration: none;
+}
 .company-info__location {
   display: flex;
   position: relative;
   bottom: 2px;
   justify-content: center;
   align-items: center;
-  background-color: #dcd3d3;
+  background-color: #e5dede;
   height: 45px;
   width: 100%;
   font-weight: bold;
@@ -475,7 +488,7 @@ main {
     margin-top: 10px;
     border-radius: 20px;
     box-shadow: 0px 5px 15px 5px #bbbbbb;
-    background-color: #dcd3d3;
+    background-color: #f0ecec;
   }
 }
 @media screen and (min-width: 768px) {
@@ -493,6 +506,9 @@ main {
   flex-direction: column;
   gap: 40px;
   list-style: none;
+}
+.how-it-works ol :nth-child(3) i {
+  color: #9356DC;
 }
 .how-it-works__numbers {
   display: flex;
@@ -516,7 +532,7 @@ main {
   width: 340px;
   font-size: 15px;
   box-shadow: 0px 5px 15px 5px #bbbbbb;
-  background-color: #dcd3d3;
+  background-color: #f0ecec;
   padding-top: 25px;
   padding-right: 50px;
 }
@@ -530,7 +546,7 @@ main {
 .restaurants {
   width: 100%;
   min-width: 350px;
-  background-color: #dcd3d3;
+  background-color: #f0ecec;
   font-weight: bold;
   font-size: 25px;
   display: flex;
@@ -636,44 +652,10 @@ main {
   font-weight: normal;
 }
 
-.header-menu {
-  background-color: #dcd3d3;
-  display: flex;
-  flex-direction: column;
-}
-.header-menu a:link {
-  color: black;
-  text-decoration: none;
-}
-.header-menu a:visited {
-  color: black;
-}
-.header-menu i {
-  padding-right: 50px;
-  font-size: 25px;
-}
-.header-menu img {
-  box-shadow: 0px 5px 15px 5px #bbbbbb;
-  border-radius: 20px;
-  height: 330px;
-  width: 100%;
-}
-@media screen and (min-width: 768px) {
-  .header-menu img {
-    width: 700px;
-  }
-}
-@media screen and (min-width: 768px) {
-  .header-menu {
-    height: 430px;
-    background: linear-gradient(to bottom right, #FF79DA, #9356DC);
-  }
-}
-
 .menu {
   display: flex;
   justify-content: center;
-  background-color: #dcd3d3;
+  background-color: #f0ecec;
 }
 
 .name {
@@ -688,7 +670,7 @@ main {
   bottom: 30px;
   width: 100%;
   height: 50px;
-  background-color: #dcd3d3;
+  background-color: #f0ecec;
   border-top-left-radius: 35px;
   border-top-right-radius: 35px;
   align-items: flex-start;
@@ -703,7 +685,7 @@ main {
     margin-top: 10px;
     border-radius: 20px;
     box-shadow: 0px 5px 15px 5px #bbbbbb;
-    background-color: #dcd3d3;
+    background-color: #f0ecec;
   }
 }
 @media screen and (min-width: 768px) {
