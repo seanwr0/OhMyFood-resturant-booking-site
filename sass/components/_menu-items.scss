@@ -59,6 +59,18 @@
 
     h3 {
         padding-top: 10px;
+       
+
+        &::after {
+            content: "";
+           
+            display: block;
+            width: 49px;
+            padding-top: 3px;
+            border-bottom: 3.5px solid $color-tertiary;
+          }
+          
+        
     }
 
     @include large-screen {

@@ -187,6 +187,13 @@ html {
 .menu-area h3 {
   padding-top: 10px;
 }
+.menu-area h3::after {
+  content: "";
+  display: block;
+  width: 49px;
+  padding-top: 3px;
+  border-bottom: 3.5px solid #99E2D0;
+}
 @media screen and (min-width: 768px) {
   .menu-area {
     justify-content: center;
@@ -288,7 +295,6 @@ html {
 }
 
 .header-menu {
-  background-color: #f0ecec;
   display: flex;
   flex-direction: column;
   gap: 10px;
