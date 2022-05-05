@@ -298,6 +298,7 @@ html {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  background: linear-gradient(to bottom, white, #f0ecec);
 }
 .header-menu a:link {
   color: black;
