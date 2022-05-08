@@ -68,6 +68,7 @@ main {
     gap: 50px;
     background-color: $color-gray;
     height: 350px;
+   
 
     @include large-screen {
         margin-right: 20px;
@@ -107,6 +108,12 @@ main {
         font-weight: bold;
         font-size: 25px;
     }
+
+    &__text{
+        text-align: center;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
 }
 
 .how-it-works {
@@ -136,6 +143,7 @@ main {
         gap: 40px;
         list-style: none;
         :nth-child(3){
+            background-color: #f5edff;
             i{
             color: $color-primary;
             }
@@ -163,13 +171,13 @@ main {
         display: flex;
         align-self: center;
         border-radius: 20px;
-        height: 70px;
-        width: 340px;
+        height: 65px;
+        width: 320px;
         font-size: 15px;
         @include area-shadow;
         background-color: $color-gray;
         padding-top: 25px;
-        padding-right: 50px;
+     
 
         i {
             font-size: 20px;
@@ -249,10 +257,10 @@ main {
    
     @include area-shadow;
     background-color: white;
-    width: 350px;
+    width: 330px;
     height: 265px;
     border-radius: 20px;
-    font-size: 25px;
+  
     @include large-screen {
         height: 350px;
         width: 320px;
@@ -270,7 +278,7 @@ main {
         color: green;
         position: absolute;
         top: 15px;
-        left: 235px;
+        left: 215px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -286,7 +294,7 @@ main {
         border-top-right-radius: 20px;
         height: 170px;
         width: 100%;
-        object-fit: fill;
+        object-fit: cover;
 
         @include large-screen {
             height: 250px;
@@ -297,12 +305,12 @@ main {
 
     h3{
         padding: 0%;
-        font-size: 25px;
+        font-size: 21px;
     }
     
     p{
         padding: 0%;
-        font-size: 20px;
+        font-size:18px;
        
         font-weight: normal;
     }
