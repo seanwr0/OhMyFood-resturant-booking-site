@@ -85,6 +85,9 @@
         padding-top: 10px;
         padding-left: 15px;
         align-self: flex-start;
+        @include large-screen{
+            padding-left: 140px;
+        }
 
 
         &::after {

@@ -35,15 +35,14 @@
     }
     img{
         @include area-shadow;
-        border-radius: 20px;
         height: 330px;
         width: 100%;
         object-fit: cover;
       
       
         @include large-screen{
-           
-           width: 700px;
+        
+           width: 80%;
         }
     }
     @include large-screen{
