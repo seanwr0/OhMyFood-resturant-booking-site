@@ -23,6 +23,7 @@
 
 
 .button {
+   
     display: flex;
     justify-content: center;
     align-items: center;
@@ -43,6 +44,7 @@
 }
 
 .order-button{
+    z-index: 3;
     padding-top: 30px;
     padding-bottom: 90px;
     margin-left: 190px;

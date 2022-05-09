@@ -31,7 +31,7 @@
         position: absolute;
         width: 360px;
         background-color: $color-gray;
-        height: 101%;
+        height: 106%;
         left: -10;
         border-width: 0px;
 
@@ -107,6 +107,15 @@
         align-items: center;
         bottom: 0px;
         padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    &__large{
+        position: relative;
+        bottom: 20px;
+        @include large-screen{
+            bottom: 0px;
+        }
     }
 }
 
@@ -119,7 +128,7 @@
     padding-top: 8px;
     padding-left: 10px;
     width: 330px;
-    height: 70px;
+    height: 60px;
     border-radius: 15px;
 
     h4 {
