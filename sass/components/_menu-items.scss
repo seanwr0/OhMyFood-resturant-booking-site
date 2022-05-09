@@ -1,19 +1,45 @@
 .menu-area {
 
-    padding-left: 15px;
+    animation: up 1s 1s;
+    animation-fill-mode: both;
+
+    &__2{
+        animation-duration: 3s;
+    }
+
+    &__3{
+        animation-duration: 5s;
+    }
+
+
+
+
+    @keyframes up {
+        0% {
+            transform: translateY(30px);
+        }
+
+        100% {
+            transform: translateY(0px);
+
+        }
+
+    }
+
     &__fade {
         z-index: 2;
         position: absolute;
-        width: 100%;
+        width: 360px;
         background-color: $color-gray;
-        height: 104%;
-        right: -3px;
+        height: 101%;
+        left: -10;
+        border-width: 0px;
 
         animation: fade-in 1.5s .7s;
-        animation-fill-mode: backwards;
         animation-fill-mode: forwards;
 
         @include large-screen {
+            width: 700px;
             height: 108%;
             left: -12px;
             bottom: -22px;
@@ -45,31 +71,32 @@
 
     @include section-block;
     background-color: $color-gray;
-    align-items: flex-start;
-    justify-content: flex-start;
-    justify-self: flex-start;
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
     position: relative;
     gap: 20px;
     height: 350px;
-    margin-bottom: 20px;
     width: 360px;
 
 
 
     h3 {
         padding-top: 10px;
-       
+        padding-left: 15px;
+        align-self: flex-start;
+
 
         &::after {
             content: "";
-           
+
             display: block;
             width: 49px;
             padding-top: 3px;
             border-bottom: 3.5px solid $color-tertiary;
-          }
-          
-        
+        }
+
+
     }
 
     @include large-screen {
@@ -80,6 +107,9 @@
     }
 }
 
+
+
+// menu item cards 
 .food-card {
     overflow: hidden;
     @include area-shadow;
@@ -90,6 +120,7 @@
     border-radius: 15px;
 
     h4 {
+
         margin-bottom: 10px;
     }
 
@@ -106,13 +137,13 @@
             transition: 1s .2s;
 
         }
-      
+
         &>.card-animation i {
             animation: spin .90s ease-in-out 1;
         }
 
-        &>.food-card__text p{
-            width:  220px;
+        &>.food-card__text p {
+            width: 220px;
             transition: 1s .2s;
         }
     }
@@ -129,7 +160,7 @@
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-        
+
     }
 
 }
@@ -145,7 +176,7 @@
     left: 270px;
     white-space: nowrap;
     font-size: 14px;
-   
+
 
     i {
         font-size: 12px

@@ -96,7 +96,7 @@ html {
   background: linear-gradient(to top, #FF79DA, #9356DC 50%, transparent 50%);
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: transparent;
   background-size: 100% 200%;
   transition: background-position 1s ease;
 }
@@ -125,7 +125,8 @@ html {
 }
 
 .menu-area {
-  padding-left: 15px;
+  animation: up 1s 1s;
+  animation-fill-mode: both;
   display: flex;
   height: 470px;
   width: 100%;
@@ -133,28 +134,42 @@ html {
   flex-direction: column;
   align-items: center;
   background-color: #f6f6f6;
-  align-items: flex-start;
-  justify-content: flex-start;
-  justify-self: flex-start;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
   position: relative;
   gap: 20px;
   height: 350px;
-  margin-bottom: 20px;
   width: 360px;
+}
+.menu-area__2 {
+  animation-duration: 3s;
+}
+.menu-area__3 {
+  animation-duration: 5s;
+}
+@keyframes up {
+  0% {
+    transform: translateY(30px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 .menu-area__fade {
   z-index: 2;
   position: absolute;
-  width: 100%;
+  width: 360px;
   background-color: #f6f6f6;
-  height: 104%;
-  right: -3px;
+  height: 101%;
+  left: -10;
+  border-width: 0px;
   animation: fade-in 1.5s 0.7s;
-  animation-fill-mode: backwards;
   animation-fill-mode: forwards;
 }
 @media screen and (min-width: 768px) {
   .menu-area__fade {
+    width: 700px;
     height: 108%;
     left: -12px;
     bottom: -22px;
@@ -187,6 +202,8 @@ html {
 }
 .menu-area h3 {
   padding-top: 10px;
+  padding-left: 15px;
+  align-self: flex-start;
 }
 .menu-area h3::after {
   content: "";
@@ -302,14 +319,18 @@ html {
   background: linear-gradient(to bottom, white, #f6f6f6);
 }
 .header-menu a:link {
+  position: relative;
+  right: 40px;
   color: black;
   text-decoration: none;
 }
 .header-menu a:visited {
   color: black;
 }
+.header-menu__text {
+  padding-left: 50px;
+}
 .header-menu i {
-  padding-right: 50px;
   font-size: 25px;
 }
 .header-menu img {

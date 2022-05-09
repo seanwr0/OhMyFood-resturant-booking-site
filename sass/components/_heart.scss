@@ -38,9 +38,10 @@
         background: linear-gradient(to top, $color-secondary, $color-primary 50%, transparent 50%);
         background-clip: text;
         -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        color: transparent;
         background-size: 100% 200%;
         transition: background-position 1s ease;
+   
 
 
 
