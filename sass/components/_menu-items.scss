@@ -39,10 +39,10 @@
         animation-fill-mode: forwards;
 
         @include large-screen {
-            width: 700px;
-            height: 108%;
-            left: -12px;
-            bottom: -22px;
+            width: 750px;
+            height: 110%;
+            left: -22px;
+            bottom: -24px;
         }
 
         @keyframes fade-in {
